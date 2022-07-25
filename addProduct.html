@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<meta charset="ISO-8859-1">
+ <link rel="stylesheet" href="/css/addProduct.css">
+<title>Add Product </title>
+</head>
+<body>
+	<div align="center">
+		<h1>Welcome To Product Page..</h1>
+		<form th:action="@{/productList}" th:object="${product}" method="post">
+			<tr>
+				<label><b>Product Name</b></label>
+				<td><select type="text" th:field="*{prodName}" value="prodName">
+						<option value="">Choose One</option>
+						<option value="Laptop">Laptop</option>
+						<option value="Washing Machine">Washing Machine</option>
+						<option value="Mobile Phone">Mobile Phone</option>
+						<option value="T-shirt">T-shirt</option>
+						<option value="Pant">Pant</option>
+				</select></td>
+			</tr>
+			<br>
+			<tr>
+				<label><b>Product Type</b></label>
+				<td><select th:field="*{prodType}" value="prodType">
+						<option value="">Choose One</option>
+						<option value="Electronics">Electronics</option>
+						<option value="Clothes">Clothes</option>
+				</select></td>
+
+			</tr>
+			<br>
+			<tr>
+				<label><b>Product Category</b></label>
+				<td><select type="text" th:field="*{prodCategory}"
+					value="prodCategory">
+						<option value="">Choose One</option>
+						<option value="Laptop (Ram:128gb, CPU:Intel i10)">Laptop
+							(Ram:128gb, CPU:Intel i10)</option>
+						<option
+							value="Washing Machine (color:white, Motion:6x, Weight:7kg)">
+							Washing Machine (company:SAMSUNG, color:white, Motion:6x,
+							Weight:7kg)</option>
+						<option
+							value=" Mobile (company:OnePlus, Ram:12gb, color:black, display:6.1inch)">
+							Mobile (company:OnePlus, Ram:12gb, color:black, display:6.1inch)</option>
+						<option value="T-shirt(size: S, M, L , XX)">T-shirt(size:
+							S, M, L , XX)</option>
+						<option value="Pant(size: S, M, L , XX)">Pant(size: S, M,
+							L , XX)</option>
+				</select></td>
+			</tr>
+			<br>
+			<tr>
+				<label><b>Product Price</b></label>
+				<td><select type="text" th:field="*{prodPrice}"
+					value="prodPrice">
+						<option value="65000">Laptop: 65000</option>
+						<option value="35000">Washing Machine: 35000</option>
+						<option value="30000">Mobile: 30000</option>
+						<option value="750">T-shirt: 750</option>
+						<option value="900">Pant: 900</option>
+				</select></td>
+			</tr>
+			<br>
+			<tr>
+				<td><button type="submit">Save</button></td>
+			</tr>
+		</form>
+	</div>
+</body>
+</html>

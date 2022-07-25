@@ -1,0 +1,27 @@
+body{
+	background-color:lightblue ;
+}
+h1{
+	background-color: lightcoral;
+	border: 1px solid black;
+	border-width: 100%;
+}
+.head{
+     display: flex;
+    margin-left: 550px;  
+ }
+
+table{
+	position: sticky;
+	padding: 2px;
+	margin-left: 100px;
+	height: 40px;
+	width: 50%;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.row{
+	background-color: #004000;
+	height: 25px;
+	border: 1px double black;
+}

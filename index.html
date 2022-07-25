@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+ <link rel="stylesheet" href="/css/index.css">
+<title>Index Page</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Welcome To Product Page..</h1>
+		<button type="submit">
+			<a th:href="@{/addProduct}" />Add Product
+		</button>
+		<button type="submit">
+			<a th:href="@{/productList}" />List
+		</button>
+	</div>
+</body>
+</html>
